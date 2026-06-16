@@ -304,19 +304,19 @@ const handleConfirmPrize = () => {
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 600px) {
   .gift-content {
-    top: 12px;
+    top: 14px;
     width: 80px;
   }
   
   .gift-name {
-    font-size: 9px;
+    font-size: 13px;
     margin-bottom: 4px;
     max-width: 75px;
   }
 
   .gift-icon {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
   }
 
   .spin-button {
