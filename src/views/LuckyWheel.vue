@@ -101,7 +101,6 @@ const spinWheel = () => {
 
 const handleConfirmPrize = () => {
   showPopup.value = false;
-  alert(`Hệ thống ghi nhận phần quà: ${winningGift.value?.name}`);
 };
 </script>
 
