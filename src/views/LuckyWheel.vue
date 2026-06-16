@@ -31,7 +31,7 @@
     <div v-if="showPopup" class="prize-popup-overlay">
       <div class="prize-popup">
         <h3>🎉 Chúc mừng bạn!</h3>
-        <p class="popup-text">Bạn đã trúng: <strong class="prize-highlight">{{ gifts[winningIndex].name }}</strong></p>
+        <p class="popup-text">Bạn đã trúng: <strong class="prize-highlight">{{ winningGift.name }}</strong></p>        
         <button class="popup-btn" @click="handleConfirmPrize">Nhận quà ngay</button>
       </div>
     </div>
