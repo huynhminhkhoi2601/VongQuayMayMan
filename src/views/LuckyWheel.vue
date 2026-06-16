@@ -124,8 +124,8 @@ const handleConfirmPrize = () => {
 
 .wheel-wrapper {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 550px;
+  height: 550px;
   max-width: 90vw;
   max-height: 90vw;
   border: 12px solid #002266; 
@@ -176,7 +176,7 @@ const handleConfirmPrize = () => {
 
 .gift-content {
   position: absolute;
-  top: 15px; 
+  top: 25px; 
   left: 50%;
   transform: translateX(-50%); 
   width: 140px;
@@ -190,7 +190,7 @@ const handleConfirmPrize = () => {
 .text-blue { color: #003399; }
 
 .gift-name {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1.3;
   margin-bottom: 8px;
@@ -200,8 +200,8 @@ const handleConfirmPrize = () => {
 }
 
 .gift-icon {
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
@@ -299,5 +299,38 @@ const handleConfirmPrize = () => {
 
 .popup-btn:hover {
   background-color: #002266 !important;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 600px) {
+  .gift-content {
+    top: 12px;
+    width: 80px;
+  }
+  
+  .gift-name {
+    font-size: 9px;
+    margin-bottom: 4px;
+    max-width: 75px;
+  }
+
+  .gift-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .spin-button {
+    width: 65px;
+    height: 65px;
+    font-size: 15px;
+    border-width: 3px;
+  }
+
+  .wheel-pointer {
+    top: -15px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #dd2c00;
+  }
 }
 </style>
