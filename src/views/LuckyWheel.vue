@@ -46,12 +46,12 @@ const getImageUrl = (name) => {
 };
 
 const gifts = ref([
-  { name: 'Sữa rửa mặt', image: getImageUrl('sua_rua_mat.png'), weight: 35 }, 
+  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_1.png'), weight: 35 }, 
   { name: 'Gấu bông', image: getImageUrl('gaubong.png'), weight: 0 },          
   { name: 'Nón bảo hiểm', image: getImageUrl('nonbaohiem.png'), weight: 0 },
+  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_2.png'), weight: 30 },
   { name: 'Bút bi SGT', image: getImageUrl('butbi.png'), weight: 0 },
-  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet.png'), weight: 35 },
-  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet.png'), weight: 30 },
+  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_3.png'), weight: 35 },
   { name: 'Balo SGT', image: getImageUrl('balo.png'), weight: 0 },
   { name: 'Chúc bạn may mắn lần sau', image: getImageUrl('goodluck.png'), weight: 0 }
 ]);
