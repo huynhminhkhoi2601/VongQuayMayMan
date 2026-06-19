@@ -82,21 +82,15 @@ const getGiftWrapperStyle = (index) => {
 const spinWheel = () => {
   if (isSpinning.value) return;
 
-  // --- KIỂM TRA LOCALSTORAGE: Chặn quay nhiều lần ---
-  const hasSpun = localStorage.getItem('hasSpun');
-  if (hasSpun === 'true') {
-    alert("Bạn đã hết lượt quay! Mỗi người chỉ được tham gia 1 lần.");
-    return; 
-  }
-  // --------------------------------------------------
-
   isSpinning.value = true;
   showPopup.value = false;
 
   const totalWeight = gifts.value.reduce((sum, gift) => sum + gift.weight, 0);
+  
 
   let randomValue = Math.random() * totalWeight;
   let selectedIndex = 0;
+
 
   for (let i = 0; i < gifts.value.length; i++) {
     randomValue -= gifts.value[i].weight;
@@ -117,11 +111,6 @@ const spinWheel = () => {
   setTimeout(() => {
     isSpinning.value = false;
     showPopup.value = true;
-
-    // --- LƯU TRẠNG THÁI ĐÃ QUAY VÀO TRÌNH DUYỆT ---
-    localStorage.setItem('hasSpun', 'true');
-    // ----------------------------------------------
-
   }, 4500); 
 };
 
