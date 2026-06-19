@@ -82,13 +82,16 @@ const getGiftWrapperStyle = (index) => {
 const spinWheel = () => {
   if (isSpinning.value) return;
 
-  // --- KIỂM TRA LOCALSTORAGE: Chặn quay nhiều lần ---
+  // 1. KIỂM TRA TRẠNG THÁI ĐÃ QUAY CHƯA
   const hasSpun = localStorage.getItem('hasSpun');
   if (hasSpun === 'true') {
     alert("Bạn đã hết lượt quay! Mỗi người chỉ được tham gia 1 lần.");
-    return; 
+    return; // Chặn đứng ngay tại đây
   }
-  // --------------------------------------------------
+
+  // 2. KHÓA LƯỢT NGAY LẬP TỨC (BỊT LỖ HỔNG F5)
+  // Vừa bấm nút là lưu vào trình duyệt luôn, không đợi vòng quay dừng nữa
+  localStorage.setItem('hasSpun', 'true');
 
   isSpinning.value = true;
   showPopup.value = false;
@@ -117,11 +120,7 @@ const spinWheel = () => {
   setTimeout(() => {
     isSpinning.value = false;
     showPopup.value = true;
-
-    // --- LƯU TRẠNG THÁI ĐÃ QUAY VÀO TRÌNH DUYỆT ---
-    localStorage.setItem('hasSpun', 'true');
-    // ----------------------------------------------
-
+    // (Đã xóa dòng localStorage.setItem ở đây vì đã dời lên trên)
   }, 4500); 
 };
 
