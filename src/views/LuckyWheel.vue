@@ -46,14 +46,14 @@ const getImageUrl = (name) => {
 };
 
 const gifts = ref([
-  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_1.png'), weight: 35 }, 
+  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_1.png'), weight: 20 }, 
   { name: 'Gấu bông', image: getImageUrl('gaubong.png'), weight: 0 },          
   { name: 'Nón bảo hiểm', image: getImageUrl('nonbaohiem.png'), weight: 0 },
-  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_2.png'), weight: 30 },
+  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_2.png'), weight: 20 },
   { name: 'Bút bi SGT', image: getImageUrl('butbi.png'), weight: 0 },
-  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_3.png'), weight: 35 },
+  { name: 'Gel tẩy tế bào chết', image: getImageUrl('tay_te_bao_chet_3.png'), weight: 30 },
   { name: 'Balo SGT', image: getImageUrl('balo.png'), weight: 0 },
-  { name: 'Chúc bạn may mắn lần sau', image: getImageUrl('goodluck.png'), weight: 0 }
+  { name: 'Chúc bạn may mắn lần sau', image: getImageUrl('goodluck.png'), weight: 30 }
 ]);
 
 const isSpinning = ref(false);
